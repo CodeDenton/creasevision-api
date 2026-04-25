@@ -16,7 +16,10 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequestMapping("/api/goalies")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = {
+    "http://localhost:3000",
+    "https://goaliestatstracker.vercel.app/"
+})
 public class GoalieController {
 
     private final GoalieService goalieService;
